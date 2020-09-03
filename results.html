@@ -9,19 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="images/q.png">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
-<body class="body-results">
-   
-    <main class='result-main'> 
+
+<body class=" body-results">
+
+    <main class='result-main'>
         <header class="result-header">
             <p>
                 <img src="images/quizyo-1.png" class="results-logo">
-            </p> 
+            </p>
             <h1 class="result-header">Results</h1>
-        
+
         </header>
         <section id="resultsDisplay" class="results-display">
-            <h2 class="result-header"   id="result">
+            <h2 class="result-header" id="result">
                 Result
             </h2>
             <p id="funny">
@@ -34,16 +36,19 @@
                 Details
             </div>
             <div class="full-results">
-                <table id="fullResults" class='results-table'> 
+                <table id="fullResults" class='results-table'>
                     <thead>
                         <th>Question</th>
                         <th>Your Answer</th>
                         <th>Correct Answer</th>
                     </thead>
                     <tbody id='tableBody'>
-                        
-                    </tbody> 
+
+                    </tbody>
                 </table>
+            </div>
+            <div class="more-results" id="feedbackButton">
+                Leave Feedback
             </div>
         </section>
         <div class="footer" id='footer'>
@@ -55,22 +60,44 @@
             <section class="copyright">
                 <p>&#169; Yogurt Board</p>
             </section>
-        </div>    
-        </main>
+        </div>
+    </main>
+
+    <div class="modal-overlay">
+
+        <div class="modal-content">
+            <div class="close-button">X</div>
+            <p>
+                Comments? Concerns? Questions? Let us know what you think about the game!
+            </p>
+            <form class="feedback-form">
+                <input name="name" id="name" placeholder="Enter name">
+                <input type="email" id="email" placeholder="Enter email">
+                <textarea name="message" rows="10" cols="30" placeholder="Enter Comments :)"></textarea>
+                <br />
+                <button type="submit" class="modal-submit">Submit</button>
+
+            </form>
+        </div>
+    </div>
+
+
     <!-- <audio  id="music">
         <source src="sfx/main-Oman.mp3" type="audio/mp3">
     </audio> -->
-    <audio  id="click">
+    <audio id="click">
         <source src="sfx/click.ogg" type="audio/mp3">
     </audio>
-    <audio  id="applause">
+    <audio id="applause">
         <source src="sfx/applause.mp3" type="audio/mp3">
     </audio>
-    <audio  id="boos">
+    <audio id="boos">
         <source src="sfx/crowdboo.mp3" type="audio/mp3">
     </audio>
 </body>
 <script src="js/confetti.js"></script>
 <script>confetti.start()</script>
 <script src="js/results.js"></script>
+<script src="js/modal.js"></script>
+
 </html>
